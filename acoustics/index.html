@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="REW measurements turned into EQ correction profiles. Python and SQLite.">
+<title>Room Acoustic Calibration System · Cikal Abyan Nur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+<div class="topbar"><a href="../">← Cikal Abyan Nur</a><span class="label">S-02 of S-04</span></div>
+
+<section class="sheet" id="project">
+  <div class="sheet-body">
+    <div>
+      <span class="label">Acoustics · measurement software</span>
+      <h2>Room Acoustic Measurement &amp; Microphone Calibration</h2>
+      <p class="sub">KAMI, a personal project</p>
+    </div>
+    <p>A microphone in a small room records a coloured sound: the room's resonances boost some frequencies and the mic adds its own curve. KAMI takes a REW frequency-response measurement, finds the peaks and nulls, and writes an EQ correction profile that flattens the response.</p>
+    <div class="diagram" role="img" aria-label="Pipeline: REW measurement, peak and null detection, EQ profile, CurveEQ export, SQLite archive">
+      <svg viewBox="0 0 640 70" aria-hidden="true">
+        <g fill="none" stroke="var(--ink)" stroke-width="1.2">
+          <rect x="4" y="16" width="110" height="36"/><rect x="134" y="16" width="120" height="36"/>
+          <rect x="274" y="16" width="110" height="36" stroke="var(--accent)" stroke-width="2"/>
+          <rect x="404" y="16" width="110" height="36"/><rect x="534" y="16" width="102" height="36"/>
+        </g>
+        <g stroke="var(--muted)" stroke-width="1.2"><line x1="114" y1="34" x2="134" y2="34"/><line x1="254" y1="34" x2="274" y2="34"/><line x1="384" y1="34" x2="404" y2="34"/><line x1="514" y1="34" x2="534" y2="34"/></g>
+        <text x="16" y="38">REW .txt</text><text x="142" y="38">peak/null detect</text>
+        <text x="282" y="38">EQ ±6 dB</text><text x="412" y="38">CurveEQ CSV</text><text x="544" y="38">SQLite</text>
+      </svg>
+    </div>
+    <div class="cols">
+      <div class="block">
+        <h3>What I built</h3>
+        <ul>
+          <li>A database that stores every raw measurement by content hash, so each export traces back to its source.</li>
+          <li>Two correction algorithms (wide-peak cut, peak/null mirror) with gains limited to −6 to +6 dB.</li>
+          <li>A local web interface for comparing rooms and microphones.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>Verification</h3>
+        <ul>
+          <li>20 unit tests passing.</li>
+          <li>Reproduces the earlier script outputs byte for byte, including rounding behaviour.</li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">SQLite</span><span class="chip">REW</span><span class="chip">Sep 2026</span></div>
+      </div>
+    </div>
+  </div>
+  <aside class="side">
+    <div><span class="sheetno">S-02</span></div>
+    <div><span class="label">Role</span><strong>Designer &amp; developer</strong></div>
+    <div><span class="label">Duration</span><strong>1 month</strong></div>
+    <div><span class="label">Output</span><strong>CLI, local web UI, EQ profiles</strong></div>
+  </aside>
+</section>
+
+<nav class="pager" aria-label="More projects"><a href="../evacuation/"><span class="label">← S-01</span><span class="t">Hospital Fire Evacuation Simulation</span></a><a href="../energy/"><span class="label">S-03 →</span><span class="t">Building Energy Analysis</span></a></nav>
+<footer>Cikal Abyan Nur · Jakarta, Indonesia · October 2026</footer>
+</div>
+</body>
+</html>

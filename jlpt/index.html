@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Exam simulator, teacher dashboard and a 1,000-question bank.">
+<title>JLPT Mock-Exam Platform · Cikal Abyan Nur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+<div class="topbar"><a href="../">← Cikal Abyan Nur</a><span class="label">S-04 of S-04</span></div>
+
+<section class="sheet" id="project">
+  <div class="sheet-body">
+    <div>
+      <span class="label">Web platform · education</span>
+      <h2>JLPT Mock-Exam Platform</h2>
+      <p class="sub">Kebun Academy · built for my own Japanese classes</p>
+    </div>
+    <p>My students were training for jobs in Japan and needed real exam practice, so I built a full JLPT simulator. It has a hidden teacher dashboard and a separate tool for writing questions. Students take timed tests, I see where they fail, and I add questions on exactly those points.</p>
+    <div class="figs">
+      <div class="fig"><b>1,000</b><span>N4–N3 questions in the bank</span></div>
+      <div class="fig"><b>4 months</b><span>beginner to N3 level, Batch 2</span></div>
+      <div class="fig"><b>110 → 120</b><span>mock score out of 180, month 1 to month 2</span></div>
+      <div class="fig"><b>3 apps</b><span>student app, question tool, API</span></div>
+    </div>
+    <div class="cols">
+      <div class="block">
+        <h3>Features</h3>
+        <ul>
+          <li>Timed N5–N1 tests with reading passages and a listening audio player.</li>
+          <li>Results with radar charts, per-section minimum-score checks and a pass certificate.</li>
+          <li>Customizable teacher dashboard: test settings, student history, question publishing.</li>
+          <li>Question tool that converts photographed exam papers into the bank format in batches.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>Architecture</h3>
+        <ul>
+          <li>The two front-end apps run on Google Cloud Run.</li>
+          <li>A separate Node.js API is the only part that holds database credentials.</li>
+          <li>MongoDB Atlas stores the question bank, exam histories and settings.</li>
+        </ul>
+        <div class="chips"><span class="chip">React + TypeScript</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Cloud Run</span><span class="chip">Jul 2026 – now</span></div>
+        <p><a href="https://github.com/IanobeL/jlpt-backend" target="_blank" rel="noopener">Backend source on GitHub →</a></p>
+      </div>
+    </div>
+  </div>
+  <aside class="side">
+    <div><span class="sheetno">S-04</span></div>
+    <div><span class="label">Role</span><strong>Teacher &amp; full-stack builder</strong></div>
+    <div><span class="label">Duration</span><strong>3 months</strong></div>
+    <div><span class="label">Output</span><strong>Live platform used by two class batches</strong></div>
+  </aside>
+</section>
+
+<nav class="pager" aria-label="More projects"><a href="../energy/"><span class="label">← S-03</span><span class="t">Building Energy Analysis</span></a><a href="../evacuation/"><span class="label">S-01 →</span><span class="t">Hospital Fire Evacuation Simulation</span></a></nav>
+<footer>Cikal Abyan Nur · Jakarta, Indonesia · October 2026</footer>
+</div>
+</body>
+</html>

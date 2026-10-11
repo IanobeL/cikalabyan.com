@@ -4,113 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Cikal Abyan Nur: architectural designer and builder of simulation and software tools. Fire evacuation, energy and acoustic analysis, JLPT platform.">
-<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Cikal Abyan Nur Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: a set of architectural drawing sheets. Each project is one sheet with a title block; the header is the cover sheet. */
-:root{
-  --paper:#f3f5f4; --sheet:#ffffff; --ink:#16232b; --muted:#56656d; --line:#cdd5d3;
-  --accent:#17784a; --accent-soft:#e2f1e9; --warn:#b5651d;
-  --display:"Archivo","Arial Narrow",Arial,sans-serif;
-  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#0f1518; --sheet:#162026; --ink:#e3ebe8; --muted:#97a7a3; --line:#2c3a40;
-  --accent:#4cc28a; --accent-soft:#183428; --warn:#e0954f; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#0f1518; --sheet:#162026; --ink:#e3ebe8; --muted:#97a7a3; --line:#2c3a40;
-  --accent:#4cc28a; --accent-soft:#183428; --warn:#e0954f; color-scheme:dark}
-
-*{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.6;
-  padding-inline:16px;padding-block:32px 56px}
-.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
-a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-h1,h2,h3{font-family:var(--display);font-stretch:85%;text-wrap:balance;margin:0;line-height:1.1}
-p{margin:0}
-.label{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.mono{font-family:var(--mono)}
-
-/* cover sheet */
-.cover{background:var(--sheet);border:1.5px solid var(--ink);display:grid;grid-template-columns:1fr minmax(0,300px)}
-.cover-main{padding:32px 30px;display:flex;flex-direction:column;gap:14px;min-width:0}
-.cover h1{font-size:clamp(34px,6vw,54px);font-weight:800;letter-spacing:-.01em}
-.cover .jp{font-size:15px;color:var(--muted);font-family:var(--body)}
-.cover .lede{max-width:60ch;font-size:16.5px}
-.tb{border-left:1.5px solid var(--ink);display:flex;flex-direction:column}
-.tb div{padding:10px 16px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
-.tb div:last-child{border-bottom:0}
-.tb strong{font-weight:600;font-size:14.5px}
-.copy{display:inline-flex;gap:8px;align-items:center;flex-wrap:wrap}
-.copy button{font:500 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:none;border:1px solid var(--line);
-  color:var(--ink);padding:2px 8px;cursor:pointer}
-.copy button:hover{border-color:var(--accent);color:var(--accent)}
-
-/* index */
-.index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);background:var(--sheet)}
-.index a{display:flex;flex-direction:column;gap:4px;padding:14px 16px;text-decoration:none;color:var(--ink);border-right:1px solid var(--line)}
-.index a:last-child{border-right:0}
-.index a:hover{background:var(--accent-soft)}
-.index .no{font-family:var(--mono);color:var(--accent);font-size:13px}
-.index .t{font-weight:600;font-size:14px;line-height:1.35}
-
-/* sheets */
-.sheet{background:var(--sheet);border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) 230px}
-.sheet-body{padding:28px 30px;display:flex;flex-direction:column;gap:18px;min-width:0}
-.sheet h2{font-size:clamp(24px,3.6vw,32px);font-weight:700}
-.sheet .sub{color:var(--muted);margin-top:6px}
-.side{border-left:1px solid var(--line);display:flex;flex-direction:column}
-.side div{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:3px}
-.side div:last-child{border-bottom:0;margin-top:auto}
-.side .sheetno{font-family:var(--display);font-stretch:75%;font-weight:800;font-size:40px;line-height:1;color:var(--accent)}
-.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-.block{display:flex;flex-direction:column;gap:8px;min-width:0}
-.block h3{font-size:15px;font-weight:700;font-stretch:100%;letter-spacing:.01em}
-ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
-.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;border:1px solid var(--line)}
-.fig{padding:12px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:2px;margin:-1px -1px 0 0}
-.fig b{font-family:var(--display);font-stretch:85%;font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.15}
-.fig span{font-size:13px;color:var(--muted);line-height:1.35}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{font-family:var(--mono);font-size:12px;border:1px solid var(--line);padding:2px 8px;color:var(--ink)}
-.note{font-size:13.5px;color:var(--muted);border-left:3px solid var(--warn);padding-left:12px}
-.diagram{overflow-x:auto;border:1px solid var(--line);padding:14px 12px}
-.diagram svg{display:block;min-width:560px;width:100%;height:auto}
-.diagram text{font-family:var(--mono);font-size:11.5px;fill:var(--ink)}
-.diagram .m{fill:var(--muted)}
-
-/* skills */
-.skills{background:var(--sheet);border:1px solid var(--line);padding:26px 30px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-.skills h2{font-size:22px;grid-column:1/-1}
-table{width:100%;border-collapse:collapse;font-size:14.5px}
-th,td{text-align:left;padding:7px 0;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
-td.n{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);white-space:nowrap;padding-left:12px}
-footer{color:var(--muted);font-size:13px;text-align:center}
-
-@media (max-width:760px){
-  .cover,.sheet{grid-template-columns:1fr}
-  .tb,.side{border-left:0;border-top:1.5px solid var(--ink)}
-  .side{border-top:1px solid var(--line);flex-direction:row;flex-wrap:wrap}
-  .side div{flex:1 1 140px;border-right:1px solid var(--line)}
-  .side div:last-child{margin-top:0}
-  .index{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .index a:nth-child(2){border-right:0}
-  .index a:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .cols,.skills{grid-template-columns:1fr}
-  .cover-main,.sheet-body,.skills{padding:22px 18px}
-}
-@media (prefers-reduced-motion:no-preference){.index a{transition:background .15s}}
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
-
 <header class="cover">
   <div class="cover-main">
     <span class="label">Engineering &amp; Software Portfolio · Oct 2026</span>
@@ -128,198 +28,11 @@ footer{color:var(--muted);font-size:13px;text-align:center}
 </header>
 
 <nav class="index" aria-label="Projects">
-  <a href="#s1"><span class="no">S-01</span><span class="t">Hospital Fire Evacuation Simulation</span></a>
-  <a href="#s2"><span class="no">S-02</span><span class="t">Room Acoustic Calibration System</span></a>
-  <a href="#s3"><span class="no">S-03</span><span class="t">Building Energy Analysis</span></a>
-  <a href="#s4"><span class="no">S-04</span><span class="t">JLPT Mock-Exam Platform</span></a>
+  <a href="evacuation/"><span class="no">S-01</span><span class="t">Hospital Fire Evacuation Simulation</span><span class="d">Pathfinder model of a 530-occupant hospital, including assisted evacuation.</span></a>
+  <a href="acoustics/"><span class="no">S-02</span><span class="t">Room Acoustic Calibration System</span><span class="d">REW measurements turned into EQ correction profiles. Python and SQLite.</span></a>
+  <a href="energy/"><span class="no">S-03</span><span class="t">Building Energy Analysis</span><span class="d">Climate Consultant, Ladybug and EDGE results turned into design decisions.</span></a>
+  <a href="jlpt/"><span class="no">S-04</span><span class="t">JLPT Mock-Exam Platform</span><span class="d">Exam simulator, teacher dashboard and a 1,000-question bank.</span></a>
 </nav>
-
-<!-- S-01 -->
-<section class="sheet" id="s1">
-  <div class="sheet-body">
-    <div>
-      <span class="label">Fire &amp; life safety · Pathfinder</span>
-      <h2>Fire Evacuation Simulation &amp; Egress Analysis</h2>
-      <p class="sub">Mardi Rahayu Hospital, Kudus · PT Global Rancang Selaras</p>
-    </div>
-    <p>I model how everyone in a multi-storey hospital gets out during a fire, including patients who cannot walk. I find the bottlenecks and check that the building empties well before conditions become dangerous. This is a weekly-reported study for the firm's principal.</p>
-    <div class="figs">
-      <div class="fig"><b>530</b><span>occupants modelled floor by floor, with profiles</span></div>
-      <div class="fig"><b>RSET &lt; ASET</b><span>with a 1.5 safety factor</span></div>
-      <div class="fig"><b>1:1 · 4:1</b><span>staff per wheelchair · staff per stretcher</span></div>
-      <div class="fig"><b>40 m</b><span>max travel distance, sprinklered healthcare</span></div>
-    </div>
-    <div class="diagram" role="img" aria-label="Timeline: required safe egress time must end before available safe egress time divided by 1.5">
-      <svg viewBox="0 0 640 96" aria-hidden="true">
-        <line x1="20" y1="70" x2="620" y2="70" stroke="currentColor" style="color:var(--line)" stroke-width="1.5"/>
-        <rect x="20" y="22" width="300" height="22" fill="var(--accent)"/>
-        <text x="28" y="37" style="fill:var(--sheet)">RSET: detection + alarm + pre-movement + travel</text>
-        <line x1="420" y1="12" x2="420" y2="78" stroke="var(--warn)" stroke-width="2" stroke-dasharray="4 3"/>
-        <text x="426" y="22" class="m">ASET ÷ 1.5</text>
-        <line x1="600" y1="12" x2="600" y2="78" stroke="var(--warn)" stroke-width="2"/>
-        <text x="548" y="22" class="m">ASET</text>
-        <text x="20" y="90" class="m">t = 0 (fire starts)</text>
-        <text x="328" y="37" class="m">margin</text>
-      </svg>
-    </div>
-    <div class="cols">
-      <div class="block">
-        <h3>What I did</h3>
-        <ul>
-          <li>Built the occupant workbook (area per person, staff ratios, patient types) and imported the floor plans into Pathfinder.</li>
-          <li>Used Steering mode for assisted evacuation, with walking speeds of 1.0 m/s for staff and 0.6 m/s for elderly people.</li>
-          <li>Ran the evacuations, read the congestion at stairs and doors, and reported results as videos and slides.</li>
-        </ul>
-      </div>
-      <div class="block">
-        <h3>Standards</h3>
-        <ul>
-          <li>SNI 03-1746-2000 (means of egress)</li>
-          <li>Permen PU 26/2008 (fire protection)</li>
-          <li>Defend-in-place: 2.8 m² per patient</li>
-        </ul>
-        <div class="chips"><span class="chip">Pathfinder</span><span class="chip">AutoCAD</span><span class="chip">Excel</span><span class="chip">Sep 2026 – now</span></div>
-      </div>
-    </div>
-  </div>
-  <aside class="side">
-    <div><span class="sheetno">S-01</span></div>
-    <div><span class="label">Role</span><strong>Simulation modeller</strong></div>
-    <div><span class="label">Duration</span><strong>2 months</strong></div>
-    <div><span class="label">Output</span><strong>Model, run videos, report deck</strong></div>
-  </aside>
-</section>
-
-<!-- S-02 -->
-<section class="sheet" id="s2">
-  <div class="sheet-body">
-    <div>
-      <span class="label">Acoustics · measurement software</span>
-      <h2>Room Acoustic Measurement &amp; Microphone Calibration</h2>
-      <p class="sub">KAMI, a personal project</p>
-    </div>
-    <p>A microphone in a small room records a coloured sound: the room's resonances boost some frequencies and the mic adds its own curve. KAMI takes a REW frequency-response measurement, finds the peaks and nulls, and writes an EQ correction profile that flattens the response.</p>
-    <div class="diagram" role="img" aria-label="Pipeline: REW measurement, peak and null detection, EQ profile, CurveEQ export, SQLite archive">
-      <svg viewBox="0 0 640 70" aria-hidden="true">
-        <g fill="none" stroke="var(--ink)" stroke-width="1.2">
-          <rect x="4" y="16" width="110" height="36"/><rect x="134" y="16" width="120" height="36"/>
-          <rect x="274" y="16" width="110" height="36" stroke="var(--accent)" stroke-width="2"/>
-          <rect x="404" y="16" width="110" height="36"/><rect x="534" y="16" width="102" height="36"/>
-        </g>
-        <g stroke="var(--muted)" stroke-width="1.2"><line x1="114" y1="34" x2="134" y2="34"/><line x1="254" y1="34" x2="274" y2="34"/><line x1="384" y1="34" x2="404" y2="34"/><line x1="514" y1="34" x2="534" y2="34"/></g>
-        <text x="16" y="38">REW .txt</text><text x="142" y="38">peak/null detect</text>
-        <text x="282" y="38">EQ ±6 dB</text><text x="412" y="38">CurveEQ CSV</text><text x="544" y="38">SQLite</text>
-      </svg>
-    </div>
-    <div class="cols">
-      <div class="block">
-        <h3>What I built</h3>
-        <ul>
-          <li>A database that stores every raw measurement by content hash, so each export traces back to its source.</li>
-          <li>Two correction algorithms (wide-peak cut, peak/null mirror) with gains limited to −6 to +6 dB.</li>
-          <li>A local web interface for comparing rooms and microphones.</li>
-        </ul>
-      </div>
-      <div class="block">
-        <h3>Verification</h3>
-        <ul>
-          <li>20 unit tests passing.</li>
-          <li>Reproduces the earlier script outputs byte for byte, including rounding behaviour.</li>
-        </ul>
-        <div class="chips"><span class="chip">Python</span><span class="chip">SQLite</span><span class="chip">REW</span><span class="chip">Sep 2026</span></div>
-      </div>
-    </div>
-  </div>
-  <aside class="side">
-    <div><span class="sheetno">S-02</span></div>
-    <div><span class="label">Role</span><strong>Designer &amp; developer</strong></div>
-    <div><span class="label">Duration</span><strong>1 month</strong></div>
-    <div><span class="label">Output</span><strong>CLI, local web UI, EQ profiles</strong></div>
-  </aside>
-</section>
-
-<!-- S-03 -->
-<section class="sheet" id="s3">
-  <div class="sheet-body">
-    <div>
-      <span class="label">Energy · climate-responsive design</span>
-      <h2>Building Energy Analysis</h2>
-      <p class="sub">Climate Consultant · Rhino 8 + Ladybug · EDGE</p>
-    </div>
-    <p>I read the site's climate first, test the building form against sun and daylight, and then check the savings against a green-building baseline. Each step's output becomes a design decision rather than a report appendix.</p>
-    <div class="cols">
-      <div class="block">
-        <h3>Analysis → output</h3>
-        <ul>
-          <li><b>Climate Consultant</b>: weather data to a psychrometric chart and a ranked list of passive strategies (shading, natural ventilation, thermal mass).</li>
-          <li><b>Ladybug on Rhino 8</b>: sun path, solar radiation on façades, and daylight levels inside the rooms.</li>
-          <li><b>EDGE</b>: projected energy, water and embodied-materials savings against the local baseline.</li>
-        </ul>
-      </div>
-      <div class="block">
-        <h3>Output → design solution</h3>
-        <ul>
-          <li>Building orientation that reduces east and west exposure.</li>
-          <li>Shading depth sized from the solar angles.</li>
-          <li>Window-to-wall ratio balanced between daylight and heat gain.</li>
-          <li>Glazing and envelope choices fed back into EDGE for the final check.</li>
-        </ul>
-        <div class="chips"><span class="chip">Climate Consultant</span><span class="chip">Ladybug</span><span class="chip">EDGE</span><span class="chip">BIM</span></div>
-      </div>
-    </div>
-  </div>
-  <aside class="side">
-    <div><span class="sheetno">S-03</span></div>
-    <div><span class="label">Role</span><strong>Performance analyst</strong></div>
-    <div><span class="label">Duration</span><strong>12 months</strong></div>
-    <div><span class="label">Output</span><strong>Strategy charts, design revisions</strong></div>
-  </aside>
-</section>
-
-<!-- S-04 -->
-<section class="sheet" id="s4">
-  <div class="sheet-body">
-    <div>
-      <span class="label">Web platform · education</span>
-      <h2>JLPT Mock-Exam Platform</h2>
-      <p class="sub">Kebun Academy · built for my own Japanese classes</p>
-    </div>
-    <p>My students were training for jobs in Japan and needed real exam practice, so I built a full JLPT simulator. It has a hidden teacher dashboard and a separate tool for writing questions. Students take timed tests, I see where they fail, and I add questions on exactly those points.</p>
-    <div class="figs">
-      <div class="fig"><b>1,000</b><span>N4–N3 questions in the bank</span></div>
-      <div class="fig"><b>4 months</b><span>beginner to N3 level, Batch 2</span></div>
-      <div class="fig"><b>110 → 120</b><span>mock score out of 180, month 1 to month 2</span></div>
-      <div class="fig"><b>3 apps</b><span>student app, question tool, API</span></div>
-    </div>
-    <div class="cols">
-      <div class="block">
-        <h3>Features</h3>
-        <ul>
-          <li>Timed N5–N1 tests with reading passages and a listening audio player.</li>
-          <li>Results with radar charts, per-section minimum-score checks and a pass certificate.</li>
-          <li>Customizable teacher dashboard: test settings, student history, question publishing.</li>
-          <li>Question tool that converts photographed exam papers into the bank format in batches.</li>
-        </ul>
-      </div>
-      <div class="block">
-        <h3>Architecture</h3>
-        <ul>
-          <li>The two front-end apps run on Google Cloud Run.</li>
-          <li>A separate Node.js API is the only part that holds database credentials.</li>
-          <li>MongoDB Atlas stores the question bank, exam histories and settings.</li>
-        </ul>
-        <div class="chips"><span class="chip">React + TypeScript</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Cloud Run</span><span class="chip">Jul 2026 – now</span></div>
-        <p><a href="https://github.com/IanobeL/jlpt-backend" target="_blank" rel="noopener">Backend source on GitHub →</a></p>
-      </div>
-    </div>
-  </div>
-  <aside class="side">
-    <div><span class="sheetno">S-04</span></div>
-    <div><span class="label">Role</span><strong>Teacher &amp; full-stack builder</strong></div>
-    <div><span class="label">Duration</span><strong>3 months</strong></div>
-    <div><span class="label">Output</span><strong>Live platform used by two class batches</strong></div>
-  </aside>
-</section>
 
 <section class="skills" aria-labelledby="sk">
   <h2 id="sk">Tools and experience</h2>
@@ -350,10 +63,6 @@ footer{color:var(--muted);font-size:13px;text-align:center}
     </table>
   </div>
 </section>
-
-<footer>Cikal Abyan Nur · Jakarta, Indonesia · October 2026</footer>
-</div>
-
 <script>
 document.getElementById('copybtn').addEventListener('click',function(){
   var b=this,t=document.getElementById('mail').textContent;
@@ -361,6 +70,7 @@ document.getElementById('copybtn').addEventListener('click',function(){
   try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';},sel);}catch(e){sel();}
 });
 </script>
-
+<footer>Cikal Abyan Nur · Jakarta, Indonesia · October 2026</footer>
+</div>
 </body>
 </html>
