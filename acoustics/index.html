@@ -4,23 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="REW measurements turned into EQ correction profiles. Python and SQLite.">
-<title>Room Acoustic Calibration System · Cikal Abyan Nur</title>
+<title>KAMI · Room Acoustic Calibration · Cikal Abyan Nur</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="wrap">
-<div class="topbar"><a href="../">← Cikal Abyan Nur</a><span class="label">S-02 of S-04</span></div>
+<div class="topbar"><a href="../">← Cikal Abyan Nur</a><span class="label">S-01 of S-04</span></div>
 
 <section class="sheet" id="project">
   <div class="sheet-body">
     <div>
       <span class="label">Acoustics · measurement software</span>
-      <h2>Room Acoustic Measurement &amp; Microphone Calibration</h2>
-      <p class="sub">KAMI, a personal project</p>
+      <h2>KAMI: Room Acoustic Measurement &amp; Calibration</h2>
+      <p class="sub">Personal project · working name RoomTune</p>
     </div>
-    <p>A microphone in a small room records a coloured sound: the room's resonances boost some frequencies and the mic adds its own curve. KAMI takes a REW frequency-response measurement, finds the peaks and nulls, and writes an EQ correction profile that flattens the response.</p>
+    <p>A microphone in a small room records a coloured sound: the room's resonances boost some frequencies and the mic adds its own curve. KAMI takes a REW frequency-response measurement, finds the peaks and nulls, and writes an EQ correction profile that flattens the response. The approach is conservative and cut-first: it removes problem peaks before it adds anything back.</p>
+    <div class="figs">
+      <div class="fig"><b>±6 dB</b><span>gain limit on every correction</span></div>
+      <div class="fig"><b>2</b><span>correction algorithms</span></div>
+      <div class="fig"><b>20</b><span>unit tests passing</span></div>
+      <div class="fig"><b>Byte for byte</b><span>matches the earlier script outputs</span></div>
+    </div>
     <div class="diagram" role="img" aria-label="Pipeline: REW measurement, peak and null detection, EQ profile, CurveEQ export, SQLite archive">
       <svg viewBox="0 0 640 70" aria-hidden="true">
         <g fill="none" stroke="var(--ink)" stroke-width="1.2">
@@ -48,19 +54,31 @@
           <li>20 unit tests passing.</li>
           <li>Reproduces the earlier script outputs byte for byte, including rounding behaviour.</li>
         </ul>
+      </div>
+      <div class="block">
+        <h3>Who it is for</h3>
+        <p>Home studios and creators who need to understand their room, not only export a curve: measure it, explain what the room is doing, recommend a conservative fix, and show the before and after.</p>
+      </div>
+      <div class="block">
+        <h3>Next</h3>
+        <ul>
+          <li>Validate the profiles in real CurveEQ and Cubase sessions, in several rooms.</li>
+          <li>Package it as a desktop app; real-time audio comes later.</li>
+        </ul>
         <div class="chips"><span class="chip">Python</span><span class="chip">SQLite</span><span class="chip">REW</span><span class="chip">Sep 2026</span></div>
       </div>
     </div>
+    <p class="note">Placeholder: before-and-after frequency-response screenshots will go here.</p>
   </div>
   <aside class="side">
-    <div><span class="sheetno">S-02</span></div>
+    <div><span class="sheetno">S-01</span></div>
     <div><span class="label">Role</span><strong>Designer &amp; developer</strong></div>
     <div><span class="label">Duration</span><strong>1 month</strong></div>
     <div><span class="label">Output</span><strong>CLI, local web UI, EQ profiles</strong></div>
   </aside>
 </section>
 
-<nav class="pager" aria-label="More projects"><a href="../evacuation/"><span class="label">← S-01</span><span class="t">Hospital Fire Evacuation Simulation</span></a><a href="../energy/"><span class="label">S-03 →</span><span class="t">Building Energy Analysis</span></a></nav>
+<nav class="pager" aria-label="More projects"><a href="../garden-of-reflection/"><span class="label">← A-04</span><span class="t">Garden of Reflection</span></a><a href="../evacuation/"><span class="label">S-02 →</span><span class="t">Hospital Fire Evacuation Simulation</span></a></nav>
 <footer>Cikal Abyan Nur · Jakarta, Indonesia · October 2026</footer>
 </div>
 </body>

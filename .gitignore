@@ -1,0 +1,5 @@
+# Local workspace notes and folders. GitHub Pages serves every committed file,
+# so these stay on this machine only.
+AGENTS.md
+CLAUDE.md
+/[0-9]*. */
