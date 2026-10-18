@@ -3,93 +3,65 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Cikal Abyan: architect, linguistic mentor and engineer and builder of simulation and software tools. KAMI acoustic calibration, fire evacuation, energy analysis, JLPT platform, and architecture competition work.">
+<meta name="description" content="Cikal Abyan: architect, linguistic mentor and engineer and builder of simulation and software tools. KAMI acoustic calibration, JLPT mock-exam platform, and architecture competition work.">
 <title>Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&family=Barlow:wght@400;500&family=Carlito&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home">
 <div class="wrap">
-<header class="head">
-  <div class="wordmark"><span class="label">Portfolio</span><h1>Cikal Abyan</h1></div>
-  <div class="seal" aria-hidden="true">チ</div>
-</header>
-
+<div class="hero-track">
 <section class="intro" aria-label="About">
+  <header class="head">
+    <div class="logo" aria-hidden="true"><img src="img/profile/gaku.png" width="606" height="700" alt=""></div>
+  </header>
   <div class="intro-text">
-    <p class="lede">Architectural designer specialising in hospitals. I design buildings and landscapes, simulate how they perform (evacuation, energy, acoustics) and write the software that makes the work faster. I lived in Tokushima, Japan, for four years.</p>
+    <div class="id">
+      <h1>Cikal<br>Abyan<br>Nur</h1>
+      <p class="lede">Architectural designer specialising in hospitals. I design buildings and landscapes, simulate how they perform (evacuation, energy, acoustics) and write the software that makes the work faster. I lived in Tokushima, Japan, for four years.</p>
+    </div>
     <dl class="facts">
       <div><dt class="label">Current role</dt><dd>Architect, Linguistic Mentor, Engineer</dd></div>
-      <div><dt class="label">Contact</dt><dd><span class="copy"><span class="mono" id="mail">cikalabyan@gmail.com</span><button type="button" id="copybtn">Copy</button></span></dd></div>
+      <div><dt class="label">Language</dt><dd>Japanese, Indonesian, HTML, PowerShell, CAD, Graphic Design, BIM, Grasshopper</dd></div>
     </dl>
   </div>
   <figure class="portrait">
-    <img src="img/profile/studio-model.jpg" width="1600" height="1200" alt="Cikal Abyan in the studio, holding a timber-and-fabric structural model in front of a wall of pinned drawings">
-    <figcaption>In the studio with a structural model, December 2020</figcaption>
+    <img src="img/profile/presenting.jpg" width="1600" height="1561" alt="Cikal Abyan presenting architectural models to a group of visitors in an exhibition hall">
   </figure>
 </section>
+<div class="hero-after" aria-hidden="true"></div>
+</div>
 
 <section class="series" aria-labelledby="ser-s">
-  <div class="series-head"><h2 id="ser-s">Software &amp; simulation</h2><span class="label">S series</span></div>
-  <nav class="index" aria-label="Software and simulation projects">
-    <a href="acoustics/"><span class="no">S-01</span><span class="t">KAMI · Room Acoustic Calibration</span><span class="d">REW measurements turned into conservative EQ correction profiles. Python and SQLite.</span></a>
-    <a href="evacuation/"><span class="no">S-02</span><span class="t">Hospital Fire Evacuation Simulation</span><span class="d">Pathfinder model of a 530-occupant hospital, including assisted evacuation.</span></a>
-    <a href="energy/"><span class="no">S-03</span><span class="t">Building Energy Analysis</span><span class="d">Climate Consultant, Ladybug and EDGE results turned into design decisions.</span></a>
-    <a href="jlpt/"><span class="no">S-04</span><span class="t">JLPT Mock-Exam Platform</span><span class="d">Exam simulator, teacher dashboard and a 1,000-question bank.</span></a>
+  <div class="series-head"><h2 id="ser-s">Project</h2></div>
+  <nav class="index index-s" aria-label="Software and simulation projects">
+    <a href="acoustics/"><span class="thumb"><img src="img/acoustics/kami-ui.jpg" width="1059" height="832" loading="lazy" alt=""></span><span class="no">S-01</span><span class="t">KAMI · Room Acoustic Calibration</span><span class="d">REW measurements turned into conservative EQ correction profiles. Python and SQLite.</span></a>
+    <a href="jlpt/"><span class="thumb"><img src="img/jlpt/exam-start.jpg" width="782" height="489" loading="lazy" alt=""></span><span class="no">S-02</span><span class="t">JLPT Mock-Exam Platform</span><span class="d">Exam simulator, teacher dashboard and a 1,000-question bank.</span></a>
   </nav>
-</section>
-
-<section class="series" aria-labelledby="ser-a">
-  <div class="series-head"><h2 id="ser-a">Architecture</h2><span class="label">A series</span></div>
   <nav class="index" aria-label="Architecture projects">
     <a href="final-project/"><span class="thumb"><img src="img/final-project/aerial-model.jpg" width="1600" height="1200" loading="lazy" alt=""></span><span class="no">A-01</span><span class="t">Neither Breakwater nor an Island</span><span class="d">Final project: breakwater, island and tourism hub as one object. AYDA Grand Finalist.</span></a>
     <a href="pixelago/"><span class="thumb"><img src="img/pixelago/aerial-app.jpg" width="1600" height="1367" loading="lazy" alt=""></span><span class="no">A-02</span><span class="t">Pixelating Archipelago</span><span class="d">Modular public space for a flooded Jakarta in 2050. 3rd Prize, AFAIR UI 2024.</span></a>
     <a href="rusun-itb/"><span class="thumb"><img src="img/rusun-itb/plaza.jpg" width="1600" height="900" loading="lazy" alt=""></span><span class="no">A-03</span><span class="t">Playful Living</span><span class="d">Low-energy student apartment: 44% energy savings in EDGE. Honorable Mention, 2022.</span></a>
-    <a href="garden-of-reflection/"><span class="thumb"><img src="img/garden-of-reflection/aerial.jpg" width="1600" height="900" loading="lazy" alt=""></span><span class="no">A-04</span><span class="t">Garden of Reflection</span><span class="d">Public healing garden for burnout, Bandung. Juara Harapan 1, DISCO 6th 2023.</span></a>
   </nav>
 </section>
 
 <section class="skills" aria-labelledby="sk">
-  <h2 id="sk">Tools, experience and recognition</h2>
-  <div>
-    <table>
-      <thead><tr><th>Language</th></tr></thead>
-      <tbody>
-        <tr><td>Japanese</td></tr>
-        <tr><td>Indonesian</td></tr>
-        <tr><td>HTML</td></tr>
-        <tr><td>PowerShell</td></tr>
-        <tr><td>CAD</td></tr>
-        <tr><td>Graphic Design</td></tr>
-        <tr><td>BIM</td></tr>
-        <tr><td>Grasshopper</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div>
-    <table>
-      <thead><tr><th>Measurement equipment</th><th style="text-align:right">Months</th></tr></thead>
-      <tbody>
-        <tr><td>Laser distance meter (building survey)</td><td class="n">12</td></tr>
-        <tr><td>Lux meter (site survey)</td><td class="n">1</td></tr>
-        <tr><td>Thermo-hygrometer (site survey)</td><td class="n">1</td></tr>
-        <tr><td>Sound level meter (site survey)</td><td class="n">1</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <h2 id="sk">Recognition</h2>
   <div class="awards">
     <table>
-      <thead><tr><th>Competition</th><th>Result</th><th style="text-align:right">Date</th></tr></thead>
+      <thead><tr><th>Competition</th><th class="res">Result</th><th style="text-align:right">Date</th></tr></thead>
       <tbody>
-        <tr><td>AYDA Asia Young Designer Award (Nippon Paint), Indonesia</td><td>National Grand Finalist</td><td class="n">Dec 2025</td></tr>
-        <tr><td>AFAIR UI 2024 Architecture Competition</td><td>3rd Prize</td><td class="n">Nov 2023</td></tr>
-        <tr><td>DISCO 6th, Sekolah Vokasi UNDIP</td><td>Juara Harapan 1</td><td class="n">Apr 2023</td></tr>
-        <tr><td>National student housing competition, SAPPK ITB</td><td>Honorable Mention</td><td class="n">Dec 2022</td></tr>
+        <tr><td>AYDA Asia Young Designer Award (Nippon Paint), Indonesia</td><td class="res">National Grand Finalist</td><td class="n">2025</td></tr>
+        <tr><td>AFAIR UI 2024 Architecture Competition</td><td class="res">3rd Prize</td><td class="n">2023</td></tr>
+        <tr><td>DISCO 6th, Sekolah Vokasi UNDIP</td><td class="res">Juara Harapan 1</td><td class="n">2023</td></tr>
+        <tr><td>National student housing competition, SAPPK ITB</td><td class="res">Honorable Mention</td><td class="n">2022</td></tr>
       </tbody>
     </table>
   </div>
 </section>
+<footer><span class="copy"><span class="label">Contact</span><span class="mono" id="mail">cikalabyan@gmail.com</span><button type="button" id="copybtn">Copy</button></span><span>Cikal Abyan · Jakarta, Indonesia · October 2026</span></footer>
+</div>
 <script>
 document.getElementById('copybtn').addEventListener('click',function(){
   var b=this,t=document.getElementById('mail').textContent;
@@ -97,7 +69,5 @@ document.getElementById('copybtn').addEventListener('click',function(){
   try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';},sel);}catch(e){sel();}
 });
 </script>
-<footer>Cikal Abyan · Jakarta, Indonesia · October 2026</footer>
-</div>
 </body>
 </html>

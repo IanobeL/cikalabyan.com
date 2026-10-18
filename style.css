@@ -1,4 +1,4 @@
-html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+html{color-scheme:light}body{margin:0}img{max-width:100%;filter:saturate(.75)}[hidden]{display:none!important}
 
 /* KAMI Sumi Paper: cornsilk paper, sumi-green ink, sage hairlines, one burnt-orange seal colour.
    Tokens and rules: KAMI design system (project/README.md). One light theme by design. */
@@ -30,45 +30,45 @@ p{margin:0}
 .label{font-family:var(--font-ui);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .mono{font-family:var(--font-ui);font-variant-numeric:tabular-nums}
 
-/* Header: wordmark left, seal right, sage rule under */
-.head{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-bottom:18px;border-bottom:1px solid var(--sage)}
-.wordmark{display:grid;gap:4px;min-width:0}
-.wordmark h1{font-family:var(--font-mincho);font-weight:600;font-size:clamp(30px,6vw,48px);line-height:1.1;letter-spacing:.14em;text-transform:uppercase}
-.seal{position:relative;flex:none;display:grid;place-items:center;width:60px;height:60px;border-radius:4px;transform:rotate(-4deg);
-  background:var(--orange);color:var(--paper);font-family:var(--font-mincho);font-weight:600;font-size:36px;line-height:1}
-.seal::before{content:"";position:absolute;inset:4.5px;border:2px solid var(--paper)}
+/* Logo: 学 brush mark, original colours, multiplied onto the paper */
+.head{position:relative;width:144px}
+.logo{position:absolute;inset:0}
+.logo img{display:block;width:100%;height:100%;object-fit:contain;object-position:left bottom;mix-blend-mode:multiply;filter:none}
+.id{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;align-items:start}
+.id h1{font-family:var(--font-mincho);font-weight:600;font-size:17px;line-height:22.5px;letter-spacing:.14em;text-transform:uppercase}
 
 /* Intro: text and facts left, portrait right */
-.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:40px;align-items:start}
+.intro{display:grid;grid-template-columns:144px minmax(0,1fr) 290px;gap:40px;align-items:stretch}
 .intro-text{display:flex;flex-direction:column;gap:22px;min-width:0}
-.lede{font-size:19px;line-height:1.5;max-width:58ch}
+.lede{font-family:var(--font-ui);font-size:15px;line-height:1.5;max-width:58ch;text-align:justify;hyphens:auto}
 .facts{display:grid;margin:0}
-.facts div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;align-items:baseline;padding:10px 0;border-top:1px solid var(--sage)}
+.facts div{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;align-items:baseline;padding:10px 0;border-top:1px solid var(--sage)}
 .facts div:last-child{border-bottom:1px solid var(--sage)}
 .facts dd{margin:0;font-family:var(--font-ui);font-size:15px}
 .copy{display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap}
 .copy button{height:32px;padding:0 12px;border:1px solid var(--control-border);border-radius:3px;background:var(--sage-fill);color:var(--ink);font:12px/1 var(--font-ui);cursor:pointer}
 .copy button:hover{background:var(--sage-hover)}
-.portrait{margin:0;display:flex;flex-direction:column;gap:6px}
-.portrait img{display:block;width:100%;height:auto;border:1px solid var(--sage)}
-.portrait figcaption{font-family:var(--font-ui);font-size:11px;color:var(--muted)}
+.portrait{margin:0 30px;position:relative;width:230px;justify-self:end;align-self:stretch}
+.portrait img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;border:1px solid var(--sage);opacity:.75}
 
 /* Project index: rows between sage rules, no cards */
 .series{display:flex;flex-direction:column;gap:10px}
 .series-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:8px;border-bottom:1px solid var(--sage)}
-.series-head h2{font-size:23px}
-.index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 24px}
+.series-head h2{font-size:17px}
+.index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 24px}
+.index+.index{margin-top:14px}
 .index a{display:flex;flex-direction:column;gap:4px;padding:12px 0 14px;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--sage)}
 .index a:hover .t{color:var(--orange)}
 .index .no{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;color:var(--orange)}
 .index .t{font-family:var(--font-ui);font-weight:500;font-size:15px;line-height:1.3}
 .index .d{font-size:14px;line-height:1.4;color:var(--muted)}
 .index .thumb{display:block;aspect-ratio:16/10;overflow:hidden;border:1px solid var(--sage);margin-bottom:6px;background:var(--paper-outer)}
+.index .thumb.ph{display:grid;place-items:center;font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-style:dashed}
 .index .thumb img{display:block;width:100%;height:100%;object-fit:cover}
 
 /* Tables */
 .skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 40px}
-.skills h2{font-size:23px;grid-column:1/-1;padding-bottom:8px;border-bottom:1px solid var(--sage)}
+.skills h2{font-size:17px;grid-column:1/-1;padding-bottom:8px;border-bottom:1px solid var(--sage)}
 .awards{grid-column:1/-1}
 table{width:100%;border-collapse:collapse;font-family:var(--font-ui);font-size:14px}
 th,td{text-align:left;padding:8px 0;border-bottom:1px solid var(--sage);vertical-align:top}
@@ -123,12 +123,44 @@ li::marker{color:var(--orange)}
 footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:10px;border-top:1px solid var(--sage);font-family:var(--font-ui);font-size:11px;color:var(--muted)}
 
 @media (max-width:760px){
-  .intro{grid-template-columns:1fr}
   .sheet{grid-template-columns:1fr;gap:24px}
   .side{border-left:0;padding-left:0;border-top:1px solid var(--sage);flex-direction:row;flex-wrap:wrap;gap:0 20px}
   .side div{flex:1 1 140px;border-bottom:0}
   .index{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cols,.skills,.photos{grid-template-columns:1fr}
   .facts div{grid-template-columns:1fr;gap:2px}
-  .seal{width:48px;height:48px;font-size:28px}
+}
+
+.awards .res{text-align:right;color:var(--muted);font-size:13px;font-weight:400}
+
+@media (max-width:980px){
+  .intro{grid-template-columns:1fr}
+  .head{width:120px;height:140px}
+  .portrait{margin:0;width:100%;max-width:420px;justify-self:start;align-self:start}
+  .portrait img{position:static;height:auto}
+}
+
+@media (max-width:560px){
+  .id{grid-template-columns:1fr;gap:8px}
+  .id h1 br{display:none}
+}
+
+/* Homepage: the cream dotted paper stops under the hero band; the rest is bone white.
+   On wide screens the band stays pinned for 200px of scrolling, then scrolls away. */
+body.home{background:#f9f6ee;overflow-x:clip}
+.home .intro{position:relative;margin-bottom:14px;padding-block:20px}
+.home .intro::before{content:"";position:absolute;z-index:-1;top:-28px;bottom:-22px;left:50%;width:100vw;margin-left:-50vw;
+  background:
+    radial-gradient(circle at 3px 3px,#606c380e 1px,transparent 1.4px) 0 0/7px 7px,
+    radial-gradient(circle at 9px 10px,#606c3809 1px,transparent 1.4px) 0 0/13px 11px,
+    #faf7ea}
+.home .hero-track{display:flow-root;margin-bottom:-200px}
+.home .hero-after{height:200px}
+@media (min-width:981px){
+  .home .intro{position:sticky;top:28px;z-index:5}
+}
+
+/* Software row has two cards: start in the middle column so the empty slot is on the left */
+@media (min-width:761px){
+  .index-s a:first-child{grid-column:2}
 }
